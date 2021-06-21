@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
+
+
 const GreatNovels = () => {
-    
+   const [searchTerm, setSearchTerm] = useState('')
     return(
         <div className='title'>
             <h2 className= 'title-name'> Great Novels</h2>
