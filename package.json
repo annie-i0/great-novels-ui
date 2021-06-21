@@ -6,7 +6,9 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.21.1",
     "concurrently": "^6.2.0",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "mysql2": "^2.2.5",
     "react": "^17.0.2",
@@ -17,6 +19,7 @@
     "web-vitals": "^1.1.2"
   },
   "scripts": {
+    "dev": "concurrently \"npm:dev:server\" \"npm:dev:client\"",
     "dev:client": "react-scripts start",
     "dev:server": "./node_modules/.bin/env-cmd ./node_modules/.bin/nodemon index.js",
     "dev:migrate": "./node_modules/.bin/env-cmd ./node_modules/.bin/sequelize db:migrate --env development --config ./configs/sequelize.js",

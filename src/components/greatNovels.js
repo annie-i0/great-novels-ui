@@ -8,8 +8,8 @@ import {
 
 const GreatNovels = () => {
    const [searchTerm, setSearchTerm] = useState('')
-   const [allNovelsList, setAllNovelsList] = useState('');
-    const [filteredNovelsList, setFilteredNovelsList] = useState('');
+   const [allNovelsList, setAllNovelsList] = useState([]);
+    const [filteredNovelsList, setFilteredNovelsList] = useState([]);
 
     useEffect(() => {
         async function pullData() {
@@ -22,14 +22,15 @@ const GreatNovels = () => {
     
       useEffect(() => {
         const filtered = filterNovels(allNovelsList, searchTerm);
+        console.log(filtered)
         setFilteredNovelsList(filtered);
       }, [searchTerm]); 
     return(
         <div className='title'>
             <h2 className= 'title-name'> Great Novels</h2>
-            <input type="text" name="search" onChange= {(event) => setSearchTerm(event.target.value)}/>
+            <input type="text" value={searchTerm} name="search" onChange= {(event) => setSearchTerm(event.target.value)}/>
             {filteredNovelsList.map((novels) => (
-          <Novels
+          <greatNovel
             key={novels.id}
             title={novels.title}
             authorId={novels.id}
