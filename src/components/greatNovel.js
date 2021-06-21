@@ -1,9 +1,9 @@
 import React from 'react'
 
-const greatNovel = ({ id, title, authorId}) => (
+const GreatNovel = ({ id, title, authorId}) => (
   <div key={id} className="novel">
     {`${title} (${authorId})`}
   </div>
 )
 
-export default greatNovel
+export default GreatNovel

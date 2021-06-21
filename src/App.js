@@ -1,5 +1,5 @@
 import './App.css'
-import GreatNovels from './components/greatNovels'
+import GreatNovels from './components/GreatNovels'
 
 const App = () => {
   return (

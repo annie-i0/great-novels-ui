@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
+import GreatNovel from './GreatNovel'
 import {
   filterNovels,
   allNovels,
 } from "../utils/novels";
-
 
 
 const GreatNovels = () => {
@@ -30,10 +30,10 @@ const GreatNovels = () => {
             <h2 className= 'title-name'> Great Novels</h2>
             <input type="text" value={searchTerm} name="search" onChange= {(event) => setSearchTerm(event.target.value)}/>
             {filteredNovelsList.map((novels) => (
-          <greatNovel
+          <GreatNovel
             key={novels.id}
             title={novels.title}
-            authorId={novels.id}
+            author={ `${novels.author.firstName} ${novels.author.lastName}`}
           />
         ))}
             
