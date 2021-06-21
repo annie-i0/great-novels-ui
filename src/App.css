@@ -3,10 +3,12 @@
 }
 
 .title  {
-align-content: center;
+  align-content: center;
   text-align: center;
   margin: auto;
 }
+
+
 
 .App-logo {
   height: 40vmin;
