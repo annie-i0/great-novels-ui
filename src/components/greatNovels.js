@@ -33,7 +33,7 @@ const GreatNovels = () => {
           <GreatNovel
             key={novels.id}
             title={novels.title}
-            author={ `${novels.author.firstName} ${novels.author.lastName}`}
+            author={ `${novels.author.nameFirst} ${novels.author.nameLast}`}
           />
         ))}
             

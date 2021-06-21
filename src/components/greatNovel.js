@@ -1,8 +1,8 @@
 import React from 'react'
 
-const GreatNovel = ({ id, title, authorId}) => (
+const GreatNovel = ({ id, title, author}) => (
   <div key={id} className="novel">
-    {`${title} (${authorId})`}
+    {`${title} (${author})`}
   </div>
 )
 
